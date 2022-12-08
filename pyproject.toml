@@ -1,0 +1,54 @@
+[tool.poetry]
+name = "flash-loan-sdk"
+version = "0.1.0"
+description = ""
+authors = ["Lev Azikov <l.azikov@zubr.io>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+betterconf = "^2.6.1"
+pytest = "^7.1.1"
+pytest-html = "^3.1.1"
+python-dotenv = "^0.20.0"
+mypy = "^0.961"
+solana = "^0.25.0"
+borsh-construct = "^0.1.0"
+pu = "^0.20.1"
+toml = "^0.10.2"
+
+[tool.poetry.dev-dependencies]
+autoflake = "^1.4"
+black = "^22.3.0"
+flake8 = "^4.0.1"
+flake8-black = "^0.3.2"
+flake8-isort = "^4.1.1"
+isort = "^5.10.1"
+pre-commit = "^2.19.0"
+pylint = "^2.13.5"
+pydocstyle = "^6.1.1"
+pylint-exit = "^1.2.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]
+addopts = "--showlocals --tb=native"
+filterwarnings = "error"
+render_collapsed = "True"
+
+log_cli = true
+log_cli_level = "INFO"
+log_cli_format = "%(asctime)s [%(levelname)8s] %(message)s (%(filename)s:%(lineno)s)"
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"
+log_level = "INFO"
+log_format = "%(asctime)s %(message)s"
+log_date_format = "%H:%M:%S"
+
+[tool.black]
+line_length = 88
+target_version = ['py39']

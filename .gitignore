@@ -1,0 +1,32 @@
+# python cache files
+*__pycache__*
+.pytest_cache
+.env
+.creds
+# log files
+log/*
+*.log
+reports/*
+#report files
+*.html
+*.xml
+.report_results/*
+
+# vim temp files
+.~
+*.swp
+*.swo
+
+# other temps files
+.DS_Store
+.tmp/*
+
+# virtual environment
+venv
+.venv
+
+# idea cache
+.idea/
+
+#mypy
+.mypy_cache/
